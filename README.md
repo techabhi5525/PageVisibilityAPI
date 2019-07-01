@@ -25,6 +25,6 @@ that just logs in the console - you're more than welcome to do it!
 - The HTML structure of `index.html` file shouldn't be changed
 - Browser support at least one browser of your choice
 
-## Nice extras to have:
+## Extras features:
 - Measure the portion of the ad that is visible in %
 - Track clicks
