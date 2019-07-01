@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ad Detection</title>
+  <style>
+    body {
+      height: 2000px;
+      width: 2500px;
+    }
+    #ad {
+      width: 300px;
+      height: 250px;
+      background: #ee7202;
+      position: relative;
+      left: 100px;
+      top: 100px;
+    }
+    table {
+      position: fixed;
+      bottom: 0%;
+      width:50%;
+      text-align: center;
+      border: 2px solid black;
+    } 
+    table caption {
+      margin-bottom: 10px;
+    }
+    table tr:nth-child(even) {
+      background-color: #eee;
+    }
+    table tr:nth-child(odd) {
+      background-color: #fff;
+    }
+    table th {
+      background-color: black;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+    <div id="ad">
+        ADVERTISEMENT
+    </div>
+    <table>
+        <caption>VIEWABILITY MEASUREMENT</caption>
+        <tr>
+            <th>Ad Type</th>
+            <th>Time</th>
+            <th>Share</th>
+            <th>Element visibility</th>
+            <th>Activity</th>
+        </tr>
+        <tr>
+            <td>Banner Ad</td>
+            <td id="adTimeCounter"><p><span id="adTimeCounterSeconds">00</span>:<span id="adTimeCounterTens">00</span></p></td>
+            <td id="percentageVisible">100%</td>
+            <td id="elementVisibility">visible</td>
+            <td id="userActivity">Active</td>
+        </tr>
+    </table>
+</body>
+<script src=script.js></script>
+</html>
