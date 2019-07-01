@@ -216,21 +216,35 @@ function startTimer () {
 //2. If ad element is visible, user goes inactive, then user goes to other tab and come back again
 //3. If ad element is not visible and user goes inactive
 //4. If ad element is not visible, user goes inactive, then user goes to other tab and come back again)
+
+//resetTimer will start the activity timer and clear existing timer
 resetTimer();
+
 var activeTime;
+
 this.addEventListener("click", resetTimer, false);
 this.addEventListener("wheel", resetTimer, false);
 
+/**
+ * Called after 5 sec. of inactivity
+ *
+ */
 function inactiveUser() {
     //if user is inactive change the user activity element to inactive
     document.getElementById("userActivity").innerHTML = "Inactive";
 };
 
+/**
+ * Called to trigger clear timer and start a fresh one
+ *
+ */
 function resetTimer() {
     //clear timeout so that new timer of active user start
     //get the user activity element and make it active
-    //set new timer so that new timer for 5000 ms ( 5 sec.) starts during these 5 sec. user will be active
-    clearTimeout(activeTime);
+	//set new timer so that new timer for 5000 ms ( 5 sec.)
+	//starts during these 5 sec. user will be active
+	
+	clearTimeout(activeTime);
     document.getElementById("userActivity").innerHTML = "Active";
     activeTime = setTimeout(inactiveUser, 3000);
 };
