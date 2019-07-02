@@ -28,3 +28,6 @@ that just logs in the console - you're more than welcome to do it!
 ## Extras features:
 - Measure the portion of the ad that is visible in %
 - Track clicks
+
+## SPECS
+To run the specs please open UnitTestRunner.html in browser
